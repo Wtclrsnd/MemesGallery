@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		7256AC8B27C92C4B00C7D7F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256AC8A27C92C4B00C7D7F7 /* AppDelegate.swift */; };
 		7256AC8D27C92C4B00C7D7F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256AC8C27C92C4B00C7D7F7 /* SceneDelegate.swift */; };
-		7256AC8F27C92C4B00C7D7F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256AC8E27C92C4B00C7D7F7 /* ViewController.swift */; };
-		7256AC9227C92C4B00C7D7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7256AC9027C92C4B00C7D7F7 /* Main.storyboard */; };
+		7256AC8F27C92C4B00C7D7F7 /* PicsumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256AC8E27C92C4B00C7D7F7 /* PicsumViewController.swift */; };
 		7256AC9427C92C4D00C7D7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7256AC9327C92C4D00C7D7F7 /* Assets.xcassets */; };
 		7256AC9727C92C4D00C7D7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7256AC9527C92C4D00C7D7F7 /* LaunchScreen.storyboard */; };
+		7256ACA127C9313A00C7D7F7 /* PicsumInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA027C9313A00C7D7F7 /* PicsumInteractor.swift */; };
+		7256ACA327C9314700C7D7F7 /* PicsumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA227C9314700C7D7F7 /* PicsumPresenter.swift */; };
+		7256ACA527C9315400C7D7F7 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA427C9315400C7D7F7 /* APIWorker.swift */; };
+		7256ACA727C931DB00C7D7F7 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA627C931DB00C7D7F7 /* Builder.swift */; };
+		7256ACA927C939E000C7D7F7 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA827C939E000C7D7F7 /* PhotosModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7256AC8727C92C4B00C7D7F7 /* PicsumGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7256AC8A27C92C4B00C7D7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7256AC8C27C92C4B00C7D7F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7256AC8E27C92C4B00C7D7F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7256AC9127C92C4B00C7D7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7256AC8E27C92C4B00C7D7F7 /* PicsumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumViewController.swift; sourceTree = "<group>"; };
 		7256AC9327C92C4D00C7D7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7256AC9627C92C4D00C7D7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7256AC9827C92C4D00C7D7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7256ACA027C9313A00C7D7F7 /* PicsumInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumInteractor.swift; sourceTree = "<group>"; };
+		7256ACA227C9314700C7D7F7 /* PicsumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumPresenter.swift; sourceTree = "<group>"; };
+		7256ACA427C9315400C7D7F7 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
+		7256ACA627C931DB00C7D7F7 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		7256ACA827C939E000C7D7F7 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,25 @@
 			children = (
 				7256AC8A27C92C4B00C7D7F7 /* AppDelegate.swift */,
 				7256AC8C27C92C4B00C7D7F7 /* SceneDelegate.swift */,
-				7256AC8E27C92C4B00C7D7F7 /* ViewController.swift */,
-				7256AC9027C92C4B00C7D7F7 /* Main.storyboard */,
+				7256ACA427C9315400C7D7F7 /* APIWorker.swift */,
+				7256ACA627C931DB00C7D7F7 /* Builder.swift */,
+				7256ACA827C939E000C7D7F7 /* PhotosModel.swift */,
+				7256AC9F27C9311900C7D7F7 /* MainScene */,
 				7256AC9327C92C4D00C7D7F7 /* Assets.xcassets */,
 				7256AC9527C92C4D00C7D7F7 /* LaunchScreen.storyboard */,
 				7256AC9827C92C4D00C7D7F7 /* Info.plist */,
 			);
 			path = PicsumGallery;
+			sourceTree = "<group>";
+		};
+		7256AC9F27C9311900C7D7F7 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				7256AC8E27C92C4B00C7D7F7 /* PicsumViewController.swift */,
+				7256ACA027C9313A00C7D7F7 /* PicsumInteractor.swift */,
+				7256ACA227C9314700C7D7F7 /* PicsumPresenter.swift */,
+			);
+			path = MainScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +97,7 @@
 				7256AC8327C92C4B00C7D7F7 /* Sources */,
 				7256AC8427C92C4B00C7D7F7 /* Frameworks */,
 				7256AC8527C92C4B00C7D7F7 /* Resources */,
+				7256AC9E27C92D4900C7D7F7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,19 +148,43 @@
 			files = (
 				7256AC9727C92C4D00C7D7F7 /* LaunchScreen.storyboard in Resources */,
 				7256AC9427C92C4D00C7D7F7 /* Assets.xcassets in Resources */,
-				7256AC9227C92C4B00C7D7F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7256AC9E27C92D4900C7D7F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7256AC8327C92C4B00C7D7F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7256AC8F27C92C4B00C7D7F7 /* ViewController.swift in Sources */,
+				7256AC8F27C92C4B00C7D7F7 /* PicsumViewController.swift in Sources */,
+				7256ACA127C9313A00C7D7F7 /* PicsumInteractor.swift in Sources */,
+				7256ACA927C939E000C7D7F7 /* PhotosModel.swift in Sources */,
+				7256ACA727C931DB00C7D7F7 /* Builder.swift in Sources */,
+				7256ACA327C9314700C7D7F7 /* PicsumPresenter.swift in Sources */,
 				7256AC8B27C92C4B00C7D7F7 /* AppDelegate.swift in Sources */,
+				7256ACA527C9315400C7D7F7 /* APIWorker.swift in Sources */,
 				7256AC8D27C92C4B00C7D7F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +192,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7256AC9027C92C4B00C7D7F7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7256AC9127C92C4B00C7D7F7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7256AC9527C92C4D00C7D7F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -217,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,9 +331,9 @@
 				INFOPLIST_FILE = PicsumGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +343,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,9 +359,9 @@
 				INFOPLIST_FILE = PicsumGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +371,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
