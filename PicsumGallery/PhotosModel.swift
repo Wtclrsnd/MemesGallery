@@ -8,17 +8,28 @@
 import Foundation
 import UIKit
 
-// MARK: - RandomPhotoResponseElement
-struct RandomPhotoResponse: Codable {
+// MARK: - Meme
+struct Meme: Codable {
+	var success: Bool?
+	var data: DataClass?
+}
+
+// MARK: - DataClass
+struct DataClass: Codable {
+	var memes: [MemeElement]?
+}
+
+// MARK: - MemeElement
+struct MemeElement: Codable {
 	var id: String?
-	var author: String?
+	var name: String?
+	var url: String?
 	var width: Int?
 	var height: Int?
-	var url: String?
-	var downloadURL: String?
+	var boxCount: Int?
 }
 
 struct Photo {
 	var image: UIImage
-	var author: String
+	var description: String
 }

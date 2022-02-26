@@ -6,35 +6,53 @@
 //
 
 import Foundation
+import UIKit
 
-class APIWorker {
-	func getData(request: URLRequest, completion: @escaping ([RandomPhotoResponse]) -> Void) {
-		URLSession.shared.dataTask(with: request) { data, _, error in
-			guard error == nil else {
-				print(String(describing: error?.localizedDescription))
-				return
-			}
-			guard let data = data else {
-				return
-			}
+final class APIWorker {
+	func getData(request: URLRequest, completion: @escaping ([Photo]) -> Void) {
+		let queue = DispatchQueue.global(qos: .userInitiated)
 
-			print(data)
+		queue.async {
+			URLSession.shared.dataTask(with: request) { data, _, error in
+				guard error == nil else {
+					print(String(describing: error?.localizedDescription))
+					return
+				}
+				guard let data = data else {
+					return
+				}
 
-			let jsonDecoder = JSONDecoder()
+				print(data)
 
-			do {
-				let responseObject = try jsonDecoder.decode(
-					[RandomPhotoResponse].self,
-					from: data
-				)
-				print(responseObject)
-				completion(responseObject)
+				let jsonDecoder = JSONDecoder()
+
+				do {
+					let responseObject = try jsonDecoder.decode(
+						Meme.self,
+						from: data
+					)
+					print(responseObject)
+					var photos: [Photo] = []
+
+					guard let memeArray = responseObject.data?.memes else { return }
+					for iPhoto in memeArray {
+						let url = URL(string: iPhoto.url ?? "")
+						guard let safeUrl = url else { return }
+						if let data = try? Data(contentsOf: safeUrl) {
+							let image = UIImage(data: data)
+							guard let gotImage = image else { return }
+							guard let name = iPhoto.name else { return }
+							let photo = Photo(image: gotImage, description: name)
+							print(photo)
+//							photos.append(contentsOf: photo)
+						}
+				}
+				completion(photos)
 			} catch let error {
 				print(String(describing: error.localizedDescription))
 			}
+			}
+			.resume()
 		}
-		.resume()
 	}
-
-
 }

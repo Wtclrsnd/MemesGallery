@@ -13,9 +13,9 @@ final class Builder {
 	private let APIWorker: APIWorker
 
 	func make() -> UINavigationController {
-		let viewController = PicsumViewController()
+		let viewController = MemesViewController()
 		let interactor = PicsumInteractor(APIWorker)
-		let presenter = PicsumPresenter()
+		let presenter = MemesPresenter()
 		viewController.output = interactor
 		interactor.output = presenter
 		presenter.output = viewController

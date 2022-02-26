@@ -11,7 +11,7 @@ protocol PicsumPresenterProtocol {
 
 }
 
-class PicsumInteractor: PicsumInteractorProtocol {
+class PicsumInteractor: MemesInteractorProtocol {
 	var worker: APIWorker?
 	var output: PicsumPresenterProtocol?
 
@@ -19,12 +19,11 @@ class PicsumInteractor: PicsumInteractorProtocol {
 		self.worker = worker
 	}
 
-	func getData(completion: @escaping (([RandomPhotoResponse]) -> Void)) {
-		let urlString = "https://picsum.photos/v2/list?limit=100"
+	func getData(completion: @escaping (([Photo]) -> Void)) {
+		let urlString = "https://api.imgflip.com/get_memes"
 		guard let url = URL(string: urlString) else { return }
-		let request = URLRequest(url: url)
-		worker?.getData(request: request, completion: { responseObject in
-			
+		let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10)
+		worker?.getData(request: request, completion: { photos in
 		})
 	}
 }

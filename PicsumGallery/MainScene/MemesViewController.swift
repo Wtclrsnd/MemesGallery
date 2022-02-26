@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol PicsumInteractorProtocol {
-	func getData(completion: @escaping ([RandomPhotoResponse]) -> Void) 
+protocol MemesInteractorProtocol {
+	func getData(completion: @escaping ([Photo]) -> Void) 
 }
 
-class PicsumViewController: UIViewController, PicsumViewControllerProtocol {
-	var output: PicsumInteractorProtocol?
+class MemesViewController: UIViewController, MemesViewControllerProtocol {
+	var output: MemesInteractorProtocol?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
