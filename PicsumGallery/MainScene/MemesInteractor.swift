@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol PicsumPresenterProtocol {
-
+protocol PicsumPresenterProtocol: AnyObject {
+	func getData(photos: [Photo])
 }
 
 class PicsumInteractor: MemesInteractorProtocol {
@@ -19,11 +19,12 @@ class PicsumInteractor: MemesInteractorProtocol {
 		self.worker = worker
 	}
 
-	func getData(completion: @escaping (([Photo]) -> Void)) {
+	func getData() {
 		let urlString = "https://api.imgflip.com/get_memes"
 		guard let url = URL(string: urlString) else { return }
 		let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10)
 		worker?.getData(request: request, completion: { photos in
+			self.output?.getData(photos: photos)
 		})
 	}
 }

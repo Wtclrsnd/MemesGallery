@@ -17,6 +17,7 @@
 		7256ACA527C9315400C7D7F7 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA427C9315400C7D7F7 /* APIWorker.swift */; };
 		7256ACA727C931DB00C7D7F7 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA627C931DB00C7D7F7 /* Builder.swift */; };
 		7256ACA927C939E000C7D7F7 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA827C939E000C7D7F7 /* PhotosModel.swift */; };
+		7256ACAB27CB96D600C7D7F7 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7256ACA427C9315400C7D7F7 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
 		7256ACA627C931DB00C7D7F7 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		7256ACA827C939E000C7D7F7 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				7256ACA427C9315400C7D7F7 /* APIWorker.swift */,
 				7256ACA627C931DB00C7D7F7 /* Builder.swift */,
 				7256ACA827C939E000C7D7F7 /* PhotosModel.swift */,
+				7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */,
 				7256AC9F27C9311900C7D7F7 /* MainScene */,
 				7256AC9327C92C4D00C7D7F7 /* Assets.xcassets */,
 				7256AC9527C92C4D00C7D7F7 /* LaunchScreen.storyboard */,
@@ -181,6 +184,7 @@
 				7256AC8F27C92C4B00C7D7F7 /* MemesViewController.swift in Sources */,
 				7256ACA127C9313A00C7D7F7 /* MemesInteractor.swift in Sources */,
 				7256ACA927C939E000C7D7F7 /* PhotosModel.swift in Sources */,
+				7256ACAB27CB96D600C7D7F7 /* MemeCollectionViewCell.swift in Sources */,
 				7256ACA727C931DB00C7D7F7 /* Builder.swift in Sources */,
 				7256ACA327C9314700C7D7F7 /* MemesPresenter.swift in Sources */,
 				7256AC8B27C92C4B00C7D7F7 /* AppDelegate.swift in Sources */,

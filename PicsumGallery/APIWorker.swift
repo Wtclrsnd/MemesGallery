@@ -31,7 +31,7 @@ final class APIWorker {
 						Meme.self,
 						from: data
 					)
-					print(responseObject)
+//					print(responseObject)
 					var photos: [Photo] = []
 
 					guard let memeArray = responseObject.data?.memes else { return }
@@ -43,14 +43,14 @@ final class APIWorker {
 							guard let gotImage = image else { return }
 							guard let name = iPhoto.name else { return }
 							let photo = Photo(image: gotImage, description: name)
-							print(photo)
-//							photos.append(contentsOf: photo)
+							photos.append(photo)
 						}
+					}
+//					print(photos)
+					completion(photos)
+				} catch let error {
+					print(String(describing: error.localizedDescription))
 				}
-				completion(photos)
-			} catch let error {
-				print(String(describing: error.localizedDescription))
-			}
 			}
 			.resume()
 		}

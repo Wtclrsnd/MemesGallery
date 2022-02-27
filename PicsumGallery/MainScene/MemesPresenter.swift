@@ -7,10 +7,15 @@
 
 import Foundation
 
-protocol MemesViewControllerProtocol {
-	
+protocol MemesViewControllerProtocol: AnyObject {
+	func getData(photos: [Photo])
 }
 
 class MemesPresenter: PicsumPresenterProtocol {
-	var output: MemesViewControllerProtocol?
+	weak var output: MemesViewControllerProtocol?
+
+	func getData(photos: [Photo]) {
+		output?.getData(photos: photos)
+	}
+
 }
