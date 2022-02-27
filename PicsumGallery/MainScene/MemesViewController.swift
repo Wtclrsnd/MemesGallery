@@ -73,4 +73,12 @@ extension MemesViewController: UICollectionViewDelegate, UICollectionViewDataSou
 		cell.photoImageView.image = memes[indexPath.row].image
 		return cell
 	}
+
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let meme = memes[indexPath.row]
+		let vc = DetailMemeViewController()
+		vc.nameLabel.text = meme.description
+		vc.imageView.image = meme.image
+		navigationController?.pushViewController(vc, animated: true)
+	}
 }

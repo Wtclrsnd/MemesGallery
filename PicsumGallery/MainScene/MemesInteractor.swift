@@ -23,7 +23,7 @@ class PicsumInteractor: MemesInteractorProtocol {
 		let urlString = "https://api.imgflip.com/get_memes"
 		guard let url = URL(string: urlString) else { return }
 		let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 10)
-		worker?.getData(request: request, completion: { photos in
+		worker?.getDataConditionally(request: request, completion: { photos in
 			self.output?.getData(photos: photos)
 		})
 	}

@@ -18,6 +18,9 @@
 		7256ACA727C931DB00C7D7F7 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA627C931DB00C7D7F7 /* Builder.swift */; };
 		7256ACA927C939E000C7D7F7 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACA827C939E000C7D7F7 /* PhotosModel.swift */; };
 		7256ACAB27CB96D600C7D7F7 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */; };
+		72DC17F227CBD62700E8AD4B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC17F127CBD62700E8AD4B /* SystemConfiguration.framework */; };
+		72E846DB27CBE2A300D3F560 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E846DA27CBE2A300D3F560 /* NetworkMonitor.swift */; };
+		72FA593E27CBEA8A002D2A20 /* DetailMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FA593D27CBEA8A002D2A20 /* DetailMemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		7256ACA627C931DB00C7D7F7 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		7256ACA827C939E000C7D7F7 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		72DC17F127CBD62700E8AD4B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		72E846DA27CBE2A300D3F560 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		72FA593D27CBEA8A002D2A20 /* DetailMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72DC17F227CBD62700E8AD4B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C6284F7A587B157F9B9A4DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72DC17F127CBD62700E8AD4B /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7256AC7E27C92C4B00C7D7F7 = {
 			isa = PBXGroup;
 			children = (
 				7256AC8927C92C4B00C7D7F7 /* PicsumGallery */,
 				7256AC8827C92C4B00C7D7F7 /* Products */,
+				2C6284F7A587B157F9B9A4DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,15 +82,11 @@
 		7256AC8927C92C4B00C7D7F7 /* PicsumGallery */ = {
 			isa = PBXGroup;
 			children = (
-				7256AC8A27C92C4B00C7D7F7 /* AppDelegate.swift */,
-				7256AC8C27C92C4B00C7D7F7 /* SceneDelegate.swift */,
-				7256ACA427C9315400C7D7F7 /* APIWorker.swift */,
-				7256ACA627C931DB00C7D7F7 /* Builder.swift */,
-				7256ACA827C939E000C7D7F7 /* PhotosModel.swift */,
-				7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */,
+				72FA593C27CBEA25002D2A20 /* Resources */,
+				72FA593A27CBE9E5002D2A20 /* New Group */,
+				72FA593827CBE948002D2A20 /* Common */,
+				72FA593927CBE97E002D2A20 /* Meme */,
 				7256AC9F27C9311900C7D7F7 /* MainScene */,
-				7256AC9327C92C4D00C7D7F7 /* Assets.xcassets */,
-				7256AC9527C92C4D00C7D7F7 /* LaunchScreen.storyboard */,
 				7256AC9827C92C4D00C7D7F7 /* Info.plist */,
 			);
 			path = PicsumGallery;
@@ -86,8 +98,46 @@
 				7256AC8E27C92C4B00C7D7F7 /* MemesViewController.swift */,
 				7256ACA027C9313A00C7D7F7 /* MemesInteractor.swift */,
 				7256ACA227C9314700C7D7F7 /* MemesPresenter.swift */,
+				72FA593D27CBEA8A002D2A20 /* DetailMemeViewController.swift */,
 			);
 			path = MainScene;
+			sourceTree = "<group>";
+		};
+		72FA593827CBE948002D2A20 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7256ACA427C9315400C7D7F7 /* APIWorker.swift */,
+				7256AC8A27C92C4B00C7D7F7 /* AppDelegate.swift */,
+				7256ACA627C931DB00C7D7F7 /* Builder.swift */,
+				72E846DA27CBE2A300D3F560 /* NetworkMonitor.swift */,
+				7256AC8C27C92C4B00C7D7F7 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		72FA593927CBE97E002D2A20 /* Meme */ = {
+			isa = PBXGroup;
+			children = (
+				7256ACAA27CB96D600C7D7F7 /* MemeCollectionViewCell.swift */,
+				7256ACA827C939E000C7D7F7 /* PhotosModel.swift */,
+			);
+			path = Meme;
+			sourceTree = "<group>";
+		};
+		72FA593A27CBE9E5002D2A20 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		72FA593C27CBEA25002D2A20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7256AC9527C92C4D00C7D7F7 /* LaunchScreen.storyboard */,
+				7256AC9327C92C4D00C7D7F7 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +150,7 @@
 				7256AC8327C92C4B00C7D7F7 /* Sources */,
 				7256AC8427C92C4B00C7D7F7 /* Frameworks */,
 				7256AC8527C92C4B00C7D7F7 /* Resources */,
-				7256AC9E27C92D4900C7D7F7 /* ShellScript */,
+				72FA593727CBE8A5002D2A20 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,7 +207,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7256AC9E27C92D4900C7D7F7 /* ShellScript */ = {
+		72FA593727CBE8A5002D2A20 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -186,8 +236,10 @@
 				7256ACA927C939E000C7D7F7 /* PhotosModel.swift in Sources */,
 				7256ACAB27CB96D600C7D7F7 /* MemeCollectionViewCell.swift in Sources */,
 				7256ACA727C931DB00C7D7F7 /* Builder.swift in Sources */,
+				72FA593E27CBEA8A002D2A20 /* DetailMemeViewController.swift in Sources */,
 				7256ACA327C9314700C7D7F7 /* MemesPresenter.swift in Sources */,
 				7256AC8B27C92C4B00C7D7F7 /* AppDelegate.swift in Sources */,
+				72E846DB27CBE2A300D3F560 /* NetworkMonitor.swift in Sources */,
 				7256ACA527C9315400C7D7F7 /* APIWorker.swift in Sources */,
 				7256AC8D27C92C4B00C7D7F7 /* SceneDelegate.swift in Sources */,
 			);
