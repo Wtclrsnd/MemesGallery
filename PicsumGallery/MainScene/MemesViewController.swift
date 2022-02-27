@@ -6,19 +6,21 @@
 //
 
 import UIKit
+import Network
 
 protocol MemesInteractorProtocol: AnyObject {
 	func getData()
 }
 
 class MemesViewController: UIViewController, MemesViewControllerProtocol {
-	var memes: [Photo] = [] {
+	private lazy var memes: [Photo] = [] {
 		didSet {
 			DispatchQueue.main.async {
 				self.collectionView.reloadData()
 			}
 		}
 	}
+
 	var output: MemesInteractorProtocol?
 	private let reusableIdentifier = "myCell"
 
